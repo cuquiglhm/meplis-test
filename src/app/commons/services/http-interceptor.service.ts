@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpInterceptorService implements HttpInterceptor {
-  private headers: any = {};
+  private headers: any;
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log(request.url.endsWith('public.company.com'));
+
     if (request.url.endsWith('public.company.com') ||
        request.url.endsWith('cdn.company.com') ||
        request.url.endsWith('live.company.com')) {
