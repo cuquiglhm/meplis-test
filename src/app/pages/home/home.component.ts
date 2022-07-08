@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpRequestService } from 'src/app/commons/services/http-request.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private httpReq: HttpRequestService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  callCompany() {
+    this.httpReq.get('http://public.company.com')
+      .then((response)=>{
+        console.log(response);
+      })
   }
 
 }
