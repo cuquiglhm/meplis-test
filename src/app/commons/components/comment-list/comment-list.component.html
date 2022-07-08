@@ -1,0 +1,25 @@
+<div id="view">
+    <div id="comm-container" *ngFor="let comment of commentsList; let i = index" [ngClass]="comment.parentId == i-1 ? 'n1' : ''">
+        <div id="first-line">
+            <img class="avatar" src="assets/imgs/avatar/avatar_1.webp">
+            <div id="name-line">
+                <div id="username">{{comment.username}}</div>
+                <div id="title">{{comment.title}}</div>
+            </div>
+            <div id="interaction">
+                <div id="like" (click)="changeAction(comment, 0)" [ngClass]="comment.like ? 'liked' : ''">
+                    <i class="lar la-thumbs-up"></i>
+                </div>
+                <div id="deslike" (click)="changeAction(comment, 1)" [ngClass]="comment.deslike ? 'desliked' : ''">
+                    <i class="lar la-thumbs-down"></i>
+                </div>
+                <div id="ban" (click)="changeAction(comment, 2)" [ngClass]="comment.ban ? 'banned' : ''">
+                    <i class="las la-ban"></i>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <p>{{comment.body}}</p>
+        </div>
+    </div>
+</div>

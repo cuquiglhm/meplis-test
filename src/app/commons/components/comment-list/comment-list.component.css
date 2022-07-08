@@ -1,0 +1,108 @@
+#view {
+    color: #535458;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+}
+
+#comm-container {
+    margin: 10px 0;
+    display: block;
+    width: 960px;
+    background: #fff8f8;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#first-line {
+    display: inline-flex;
+    width: 100%;
+}
+
+#comm-container #first-line > #name-line{
+    min-width: 60%;
+    margin-left: 16px;
+    display: flex;
+    padding: 8px;
+}
+
+#comm-container #first-line #name-line > #username {
+    min-width: 15%;
+    margin-left: 16px;
+    padding: 8px;
+    color: #497FC5;
+}
+
+#comm-container #first-line #name-line > #title {
+    margin: auto;
+    min-width: 70%;
+    margin-left: 16px;
+}
+
+#comm-container #first-line > img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+
+#comm-container #first-line > #interaction {
+    display: flex;
+    position: relative;
+    width: 20%;
+    height: 40px;
+    margin-left: auto;
+    right: 0px;
+    overflow: hidden;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+}
+
+#comm-container #first-line #interaction .lar, #comm-container #interaction .las  {
+    font-size: 1.5rem;
+}
+
+#comm-container #first-line > #interaction > #like {
+    display: block;
+    margin: auto;
+}
+
+#comm-container #first-line > #interaction > #deslike {
+    margin: auto;
+}
+
+#comm-container #first-line > #interaction > #ban {
+    margin: auto;
+}
+
+#comm-container #body {
+    margin-left: 10%;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: .9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: normal;
+}
+
+.n1 {
+    margin-left: 32px !important;
+    width: calc(960px - 32px) !important;
+    margin-top: 3px !important;
+}
+
+.liked {
+    color: #40B9F0 !important;
+}
+
+.desliked {
+    color: #F2555F !important;
+}
+
+.banned {
+    color: #ff0000 !important;
+}
